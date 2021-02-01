@@ -15,7 +15,7 @@
   }else{
     $errorMessage = '';
   } 
-
+  
   // check age
   if($age >= 18){
     $displayMessage = "I'm old enough to vote in the United States.";
@@ -35,25 +35,22 @@
 </head>
 <body>
   <div class="phone">
-    
     <div class="volume"></div>
     <div class="power"></div>
-    
     <div class="content">
       <div class="camera"><div class="dot"></div></div>
       <p class="date">Today is <?php echo date('d/m/Y') ?></p>
 
       <?php if($errorMessage==''){ ?>
- 
+        // display content
         <p class="displayName">Hello! My name is <?php echo htmlspecialchars($firstName. ' ' .$lastName) ?>.</p>
         <p class="display">I'm <?php echo htmlspecialchars($age) ?> years old, and <?php echo $displayMessage ?></p>
         <?php echo '<p class="display">That means '." I'm at least " . $age*365 . ' days old.' ?>
-         
+      // display error message  
       <?php }else{ ?>
         <p class="displayName"> <?php echo $errorMessage ?> </p>
       <?php } ?>
     </div>
   </div>
-
 </body>
 </html>
