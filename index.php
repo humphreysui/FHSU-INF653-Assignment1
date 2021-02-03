@@ -31,7 +31,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>INF653 Assignment 1 - Humphrey Sui, Qiupeng</title>
-  <link rel="stylesheet" href="http://localhost/INF653_assignment_1/styles.css">
+  <link rel="stylesheet" href="/INF653_assignment_1/styles.css">
 </head>
 <body>
   <div class="phone">
@@ -42,11 +42,11 @@
       <p class="date">Today is <?php echo date('d/m/Y') ?></p>
 
       <?php if($errorMessage==''){ ?>
-        // display content
+        <!-- display content -->
         <p class="displayName">Hello! My name is <?php echo htmlspecialchars($firstName. ' ' .$lastName) ?>.</p>
         <p class="display">I'm <?php echo htmlspecialchars($age) ?> years old, and <?php echo $displayMessage ?></p>
         <?php echo '<p class="display">That means '." I'm at least " . $age*365 . ' days old.' ?>
-      // display error message  
+      <!-- display error message  --> 
       <?php }else{ ?>
         <p class="displayName"> <?php echo $errorMessage ?> </p>
       <?php } ?>
